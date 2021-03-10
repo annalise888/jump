@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jump</title>
+	
+	<script language = "javascript">
+		function change() {
+			var button = document.getElementById("btn");
+			var box1 = document.getElementById("box1");
+			var box2 = document.getElementById("box2");
+			
+			if (button.innerHTML=="JUMP&gt;"){
+				button.innerHTML = "&lt;JUMP";
+				box1.value = box2.value;
+				box2.value = "";
+			} 
+			else if (button.innerHTML=="&lt;JUMP"){
+				button.innerHTML = "JUMP&gt;";
+				box2.value = box1.value;
+				box1.value = "";
+			} 
+		}
+	</script>
+	
+</head>
+
+<body>
+	
+	<form>
+		<input type="text" id="box1" name="box1">
+		<button type="button" id="btn" onclick="change();">JUMP&gt;</button>
+		<input type="text" id="box2" name="box2">
+	</form>
+	
+</body>
+</html>
